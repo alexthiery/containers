@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.local
+.rstudio
+.conda
+.nextflow*
+work
+.cache
+results
+temp
+.DS_Store
+null
+.devcontainer
+.vscode
