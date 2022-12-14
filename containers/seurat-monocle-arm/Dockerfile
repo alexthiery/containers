@@ -1,4 +1,4 @@
-FROM  alexthiery/rstudio-tidyverse-arm:latest
+FROM  amoselb/rstudio-m1:latest
 
 LABEL authors="alex.thiery@crick.ac.uk" \
       description="Docker image containing all requirements to run Seurat analysis - taken from seurat-docker on github"
