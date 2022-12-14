@@ -12,9 +12,10 @@ jobs:
   build-push-docker:
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1
       matrix:
         docker-file: ["Dockerfile"]
-        module-name: ["seurat-monocle"]
+        module-name: ["seurat-monocle", "rstudio-tidyverse-arm", "seurat-monocle-arm"]
 
     steps:
       - uses: actions/checkout@v2
