@@ -22,7 +22,7 @@ jobs:
       - name: Set version and tags
         id: ver
         run: |
-          VERSION=`cat NF-downstream_analysis/containers/${{matrix.module-name}}/VERSION`
+          VERSION=`cat containers/${{matrix.module-name}}/VERSION`
           echo "version: $VERSION"
           echo "::set-output name=version::$(echo $VERSION)"
         shell: bash
@@ -39,7 +39,7 @@ jobs:
       - name: Docker Buildx (push)
         run: |
           docker buildx build \
-            --tag alexthiery/lamprey-multiarch-${{matrix.module-name}}:${{matrix.tag}}-${{steps.ver.outputs.version}} \
+            --tag alexthiery/${{matrix.module-name}}:${{steps.ver.outputs.version}} \
             --platform linux/amd64,linux/arm64 \
             --output "type=image,push=true" \
-            NF-downstream_analysis/containers/${{matrix.module-name}}
+            containers/${{matrix.module-name}}
