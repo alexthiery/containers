@@ -1,7 +1,7 @@
 FROM  nfcore/base:2.1
 
 LABEL authors="alex.thiery@crick.ac.uk" \
-      description="Docker image containing requirements to run SEACELLS "
+      description="Docker image containing requirements to run SEACELLS"
 
 RUN apt-get update
 RUN apt-get install -y \
