@@ -17,3 +17,6 @@ ENV PATH /opt/conda/envs/seacells/bin:$PATH
 
 # Dump the details of the installed packages to a file for posterity
 RUN conda env export --name seacells > seacells.yml
+
+# Add missing library
+RUN pip install ipywidgets
