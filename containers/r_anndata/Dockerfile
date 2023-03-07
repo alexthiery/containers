@@ -1,4 +1,4 @@
-FROM  alexthiery/10x-npb-seurat:2.8
+FROM  alexthiery/10x-npb-seurat:latest
 
 LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image containing all requirements to run 10x downstream analysis in seurat + anndata for data conversion"
