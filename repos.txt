@@ -1,1 +1,3 @@
 alexthiery/seurat-monocle:0.1
+alexthiery/seacells-0.2
+alexthiery/r_anndata-0.1
