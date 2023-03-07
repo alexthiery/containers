@@ -7,4 +7,5 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
 RUN  R -e "install.packages('anndata')"
 
 # Install anndata python module
-RUN pip install anndata
+RUN   conda install -c anaconda pip && \
+      pip install anndata
