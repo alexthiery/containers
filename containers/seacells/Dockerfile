@@ -20,3 +20,6 @@ RUN conda env export --name seacells > seacells.yml
 
 # Add missing library
 RUN pip install ipywidgets
+
+# Install previous version of matplotlib due to clashes with scanpy
+RUN pip install 'matplotlib<3.7'
