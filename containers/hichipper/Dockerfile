@@ -8,8 +8,9 @@ RUN apt-get install -y \
     bedtools
 
 # Python version 2.7
-RUN sudo apt-add-repository universe \
-    sudo apt install python2-minimal
+RUN sudo apt update
+RUN sudo apt install python2
+RUN python2 -V
 
 # R packages
 RUN   R -e "install.packages('data.table')" && \
