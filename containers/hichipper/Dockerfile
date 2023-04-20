@@ -5,10 +5,11 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
 
 # Ubuntu dependencies
 RUN apt-get install -y \
-    bedtools \
-    libssl-dev \
-    libcurl4-openssl-dev \
-    libxml2-dev
+    bedtools
+
+# Python version 2.7
+RUN sudo apt-add-repository universe \
+    sudo apt install python2-minimal
 
 # R packages
 RUN   R -e "install.packages('data.table')" && \
