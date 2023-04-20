@@ -4,7 +4,11 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image with hichipper"
 
 # Ubuntu dependencies
-RUN   apt-get install bedtools libssl-dev libcurl4-openssl-dev libxml2-dev
+RUN apt-get install -y \
+    bedtools \
+    libssl-dev \
+    libcurl4-openssl-dev \
+    libxml2-dev
 
 # R packages
 RUN   R -e "install.packages('data.table')" && \
