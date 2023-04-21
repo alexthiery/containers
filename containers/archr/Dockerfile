@@ -31,6 +31,6 @@ RUN   R -e "install.packages('gridExtra')" && \
       R -e "install.packages('future.apply')" && \
       R -e "install.packages('clustree')"
 
-# Install MACS2
+# Install MACS2 for peak calling:
 RUN   conda install -c anaconda pip && \
       pip install MACS2
