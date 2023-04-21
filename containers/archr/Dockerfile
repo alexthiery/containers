@@ -1,4 +1,4 @@
-FROM  evahamrud/sc_multi_omic-tidyverse_4.1.2:latest
+FROM  alexthiert/tidyverse_4.1.2:1.0.0
 
 LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image with R4.1.2 and ArchR"

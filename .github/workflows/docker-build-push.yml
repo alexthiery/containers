@@ -15,7 +15,7 @@ jobs:
       # max-parallel: 1
       matrix:
         docker-file: ["Dockerfile"]
-        module-name: ["seurat-monocle", "seacells", "r_anndata", "r_sqldf", "hichipper"]
+        module-name: ["seurat-monocle", "seacells", "tidyverse_4.1.2"]
 
     steps:
       - uses: actions/checkout@v2
