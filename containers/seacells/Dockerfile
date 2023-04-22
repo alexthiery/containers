@@ -1,6 +1,6 @@
 FROM  nfcore/base:2.1
 
-LABEL authors="alex.thiery@crick.ac.uk" \
+LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image containing requirements to run SEACELLS"
 
 RUN apt-get update
