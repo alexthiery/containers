@@ -23,3 +23,6 @@ RUN pip install ipywidgets
 
 # Install previous version of matplotlib due to clashes with scanpy
 RUN pip install 'matplotlib<3.7'
+
+# Install scanpy again as it doesn't seem to load from environment.yaml installation
+RUN pip install scanpy==1.8.2

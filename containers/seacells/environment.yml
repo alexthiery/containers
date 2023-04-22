@@ -9,7 +9,6 @@ dependencies:
   - python=3.8
   - cython
   - ipython
-  - pandas=1.2.4
   - scanpy=1.8.2
   - loompy=3.0.6
   - python-igraph
