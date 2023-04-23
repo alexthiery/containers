@@ -25,4 +25,4 @@ RUN pip install ipywidgets
 RUN pip install 'matplotlib<3.7'
 
 # Install older version of pandas which is compatible with scanpy 1.8.2
-RUN pip install pandas=1.3.3
+RUN pip install pandas==1.3.3
