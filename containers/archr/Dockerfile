@@ -4,7 +4,7 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image with R4.1.2 and ArchR"
 
 
-## Set up BiocManager:
+## Set up BiocManager: 
 RUN   R -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')" && \
       R -e "BiocManager::install(version = '3.14')" && \
       R -e "require(devtools)"
