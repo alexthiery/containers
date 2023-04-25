@@ -19,10 +19,10 @@ ENV PATH /opt/conda/envs/seacells/bin:$PATH
 RUN conda env export --name seacells > seacells.yml
 
 # Add missing library
-RUN pip install ipywidgets
+RUN pip install ipywidgets==8.0.6
 
 # Install previous version of matplotlib due to clashes with scanpy
-RUN pip install 'matplotlib<3.7'
+RUN pip install matplotlib==3.6.3
 
 # Install older version of pandas which is compatible with scanpy 1.8.2
 RUN pip install pandas==1.3.3
