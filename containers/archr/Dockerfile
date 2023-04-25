@@ -4,11 +4,8 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image with R4.1.2 and ArchR"
 
 
-## Set up params for installation:
-RUN   R -e "r <- getOption('repos')" && \
-      R -e "r['CRAN'] <- 'http://cran.cnr.berkeley.edu/'" && \
-      R -e "options(repos = r)" && \
-      R -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')" && \
+## Set up BiocManager:
+RUN   R -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')" && \
       R -e "BiocManager::install(version = '3.14')" && \
       R -e "require(devtools)"
 
