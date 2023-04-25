@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths: 
-      - 'archr/Dockerfile'
+      - 'containers/archr/Dockerfile'
 
 jobs:
   build-push-docker:
