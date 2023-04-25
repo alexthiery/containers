@@ -26,12 +26,12 @@ RUN   R -e "if (!requireNamespace('BSgenome.Ggallus.UCSC.galGal6', quietly = TRU
 ## Other packages:
 # Install other packages that are needed
 RUN   R -e "require(devtools)" && \
-      R -e "install_version('hexbin', version = '1.28.2')" && \
-      R -e "install_version('gridExtra', version = '2.3')" && \
-      R -e "install_version('getopt', version = '1.20.3')" && \
-      R -e "install_version('optparse', version = '1.7.1')" && \
-      R -e "install_version('pheatmap', version = '1.0.12')" && \
-      R -e "install_version('patchwork', version = '1.1.1')" && \
-      R -e "install_version('future', version = '1.24.0')" && \
-      R -e "install_version('future.apply', version = '1.8.1')" && \
-      R -e "install_version('clustree', version = '0.4.4')"
+      R -e "devtools::install_version('hexbin', version = '1.28.2')" && \
+      R -e "devtools::install_version('gridExtra', version = '2.3')" && \
+      R -e "devtools::install_version('getopt', version = '1.20.3')" && \
+      R -e "devtools::install_version('optparse', version = '1.7.1')" && \
+      R -e "devtools::install_version('pheatmap', version = '1.0.12')" && \
+      R -e "devtools::install_version('patchwork', version = '1.1.1')" && \
+      R -e "devtools::install_version('future', version = '1.24.0')" && \
+      R -e "devtools::install_version('future.apply', version = '1.8.1')" && \
+      R -e "devtools::install_version('clustree', version = '0.4.4')"
