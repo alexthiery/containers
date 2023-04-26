@@ -15,7 +15,7 @@ jobs:
       # max-parallel: 1
       matrix:
         docker-file: ["Dockerfile"]
-        module-name: ["archr", "archr_macs2"]
+        module-name: ["archr"]
 
     steps:
       - uses: actions/checkout@v2
