@@ -8,3 +8,6 @@ RUN   R -e "BiocManager::install('HiCDCPlus')"
 
 # Install GenomicFeatures
 RUN   R -e "BiocManager::install('GenomicFeatures')"
+
+# Install Venn diagram plotter
+RUN   R -e "install.packages('VennDiagram')"
