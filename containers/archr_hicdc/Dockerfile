@@ -11,3 +11,6 @@ RUN   R -e "BiocManager::install('GenomicFeatures')"
 
 # Install Venn diagram plotter
 RUN   R -e "install.packages('VennDiagram')"
+
+# Install DESeq2
+RUN   R -e "BiocManager::install('DESeq2')"
