@@ -6,7 +6,10 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
 # Install apt packages
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
-      libxt-dev
+      libxt-dev \
+      libbz2-dev
 
 # Install HiContacts
 RUN   R -e "BiocManager::install('HiContacts', version = '3.17')"
+RUN   R -e "BiocManager::install('HiContactsData', version = '3.17')"
+RUN   R -e "BiocManager::install('rtracklayer', version = '3.17')"
