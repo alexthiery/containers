@@ -9,4 +9,4 @@ RUN apt-get update \
       libxt-dev
 
 # Install HiContacts
-RUN   R -e "BiocManager::install('HiContacts', version = '3.12')"
+RUN   R -e "BiocManager::install('HiContacts', version = '3.17')"
