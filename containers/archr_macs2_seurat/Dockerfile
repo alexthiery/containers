@@ -10,3 +10,11 @@ RUN   conda install -c anaconda pip && \
       cd MACS-2.2.7.1 && \
       sed -i 's/install_requires = \[f"numpy>={numpy_requires}",\]/install_requires = \[f"numpy{numpy_requires}",\]/' setup.py && \
       pip install -e .
+
+# Install curl
+RUN apt-get update \
+      && apt-get install -y --no-install-recommends \
+      curl
+
+# Install Seurat v5
+RUN   R -e "remotes::install_github('satijalab/seurat', 'seurat5', quiet = TRUE, upgrade = 'always')"
