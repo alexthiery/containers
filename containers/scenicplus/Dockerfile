@@ -4,8 +4,6 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image containing requirements for scenicplus"
 
 # Install scenicplus using conda
-RUN conda create --name scenicplus python=3.8
-RUN conda activate scenicplus
 RUN git clone https://github.com/aertslab/scenicplus
 RUN cd scenicplus
 RUN pip install -e .
