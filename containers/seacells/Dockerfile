@@ -8,12 +8,11 @@ RUN apt-get install -y \
     libhdf5-dev \
     gcc
 
-# Install the conda environment
-COPY environment.yml /
-RUN conda env create --quiet -f /environment.yml && conda clean -a
+# # Create a conda environment
+# RUN conda create --name homer python=3.5
 
-# Add conda installation dir to PATH (instead of doing 'conda activate')
-ENV PATH /opt/conda/envs/seacells/bin:$PATH
+# # Add conda installation dir to PATH (instead of doing 'conda activate')
+# ENV PATH /opt/conda/envs/seacells/bin:$PATH
 
 # Install homer
 RUN conda install -c bioconda homer
