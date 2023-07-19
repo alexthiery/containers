@@ -6,4 +6,4 @@ LABEL authors="eva.hamrud@crick.ac.uk" \
 # Install scenicplus using conda
 RUN git clone https://github.com/aertslab/scenicplus
 RUN cd scenicplus
-RUN pip install -e .
+RUN pip install .
