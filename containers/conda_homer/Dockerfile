@@ -1,4 +1,4 @@
-FROM  continuumio/conda-ci-linux-64-python3.8
+FROM  nfcore/base:2.1
 
 LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image containing conda and HOMER"
