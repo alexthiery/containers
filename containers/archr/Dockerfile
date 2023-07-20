@@ -59,7 +59,7 @@ RUN   R -e "if (!requireNamespace('org.Gg.eg.db', quietly = TRUE)){BiocManager::
 # Install UCSC genome (will have to change to ENSEMBL later)
 RUN   R -e "if (!requireNamespace('BSgenome.Ggallus.UCSC.galGal6', quietly = TRUE)){BiocManager::install('BSgenome.Ggallus.UCSC.galGal6')}"
 # Install JASPAR motif database
-RUN   R -e "BiocManager::install'JASPAR2020')"
+RUN   R -e "BiocManager::install('JASPAR2020')"
 
 ## Other packages:
 # Install other packages that are needed
