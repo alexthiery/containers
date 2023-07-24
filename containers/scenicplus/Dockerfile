@@ -20,3 +20,7 @@ RUN pip install -e . --use-feature=2020-resolver
 
 # Install jupyter notebook
 RUN pip install jupyter
+
+# Re-install scanpy as it doesn't seem to work
+RUN pip uninstall scanpy
+RUN pip install scanpy==1.4.6
