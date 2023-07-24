@@ -15,6 +15,6 @@ RUN apt-get install -y \
 # Install scenicplus using conda
 RUN git clone https://github.com/aertslab/scenicplus
 RUN cd scenicplus
-RUN pwd -p
+RUN pwd -P
 RUN ls -lah
 RUN pip install -e . --use-feature=2020-resolver
