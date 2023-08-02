@@ -14,3 +14,6 @@ RUN   R -e "install.packages('Signac')"
 # Install scMEGA
 RUN R -e "library(devtools)"
 RUN R -e "devtools::install_github('CostaLab/scMEGA')"
+
+# Install slightly older Signac
+RUN R -e "devtools::install_version(package = 'Signac', version = package_version('1.9.0'))"
