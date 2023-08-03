@@ -1,4 +1,4 @@
-FROM  alexthiery/archr_macs2_seurat:3.0
+FROM  alexthiery/archr_macs2_seurat:3.0 
 
 LABEL authors="eva.hamrud@crick.ac.uk" \
       description="Docker image with R4.1.2 and ArchR and Macs2 and seurat and signac and scMEGA"

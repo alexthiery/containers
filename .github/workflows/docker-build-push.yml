@@ -15,7 +15,7 @@ jobs:
       # max-parallel: 1
       matrix:
         docker-file: ["Dockerfile"]
-        module-name: ["archr_dev_macs2", "archr_hicdc", "hicontacts", "conda_homer", "scenicplus", "archr_seurat_signac_mega"]
+        module-name: ["archr_seurat_signac_mega"]
 
     steps:
       - uses: actions/checkout@v2
