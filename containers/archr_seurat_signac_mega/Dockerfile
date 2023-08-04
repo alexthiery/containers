@@ -15,5 +15,5 @@ RUN   R -e "install.packages('Signac')"
 RUN R -e "library(devtools)"
 RUN R -e "devtools::install_github('CostaLab/scMEGA')"
 
-# Install slightly older Signac
-RUN R -e "devtools::install_version(package = 'Signac', version = package_version('1.9.0'))"
+# Install Seurat v5 and latest Signac
+RUN   R -e "remotes::install_github('stuart-lab/signac', 'seurat5')"
