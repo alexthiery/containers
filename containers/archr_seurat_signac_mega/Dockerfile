@@ -8,9 +8,6 @@ RUN apt-get update \
       && apt-get install -y --no-install-recommends \
       cmake
 
-# Install signac
-RUN   R -e "install.packages('Signac')"
-
 # Install scMEGA
 RUN R -e "library(devtools)"
 RUN R -e "devtools::install_github('CostaLab/scMEGA')"
