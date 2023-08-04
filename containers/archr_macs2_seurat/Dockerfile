@@ -16,5 +16,5 @@ RUN apt-get update \
       && apt-get install -y --no-install-recommends \
       curl
 
-# Install Seurat v5
-RUN   R -e "remotes::install_github('satijalab/seurat', 'seurat5', quiet = TRUE, upgrade = 'always')"
+# Install Seurat v5 and latest Signac
+RUN   R -e "remotes::install_github('stuart-lab/signac', 'seurat5')"
