@@ -14,3 +14,6 @@ RUN R -e "devtools::install_github('CostaLab/scMEGA')"
 
 # Install Seurat v5 and latest Signac
 RUN   R -e "remotes::install_github('stuart-lab/signac', 'seurat5')"
+
+# Install JASPAR motif database (it should already be installed in the base image 'archr' but cant load it from this image)
+RUN   R -e "BiocManager::install('JASPAR2020')"
