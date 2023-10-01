@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths: 
-      - '**/Dockerfile'
+      - '**/mega_r4.3/Dockerfile'
 
 jobs:
   build-push-docker:
@@ -15,7 +15,7 @@ jobs:
       # max-parallel: 1
       matrix:
         docker-file: ["Dockerfile"]
-        module-name: ["archr_seurat_signac_mega"]
+        module-name: ["mega_r4.3"]
 
     steps:
       - uses: actions/checkout@v2
