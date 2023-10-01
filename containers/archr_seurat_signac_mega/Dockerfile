@@ -17,3 +17,16 @@ RUN   R -e "remotes::install_github('stuart-lab/signac', 'seurat5')"
 
 # Install JASPAR motif database (it should already be installed in the base image 'archr' but cant load it from this image)
 RUN   R -e "BiocManager::install('JASPAR2020')"
+
+# Install Venn diagram plotter
+RUN   R -e "install.packages('VennDiagram')"
+
+# Install pheatmap
+RUN   R -e "devtools::install_version('pheatmap', version = '1.0.12')"
+
+# Install complex heatmap
+RUN   R -e "BiocManager::install('ComplexHeatmap')"
+
+# Install packages to GO analysis
+RUN R -e "BiocManager::install('topGO')"
+RUN R -e "BiocManager::install('clusterProfiler')"
