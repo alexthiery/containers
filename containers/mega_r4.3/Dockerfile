@@ -9,7 +9,6 @@ RUN apt-get update \
       apt-utils \
       build-essential \
       libhdf5-dev \
-      libboost-filesystem1.67-dev \
       libxtst6 \
       libxt-dev \
       libfontconfig1-dev \
