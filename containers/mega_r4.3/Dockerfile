@@ -23,12 +23,11 @@ RUN   echo 'local({library(BiocManager); r <- repositories(); r["CRAN"] <- "http
 
 ## Set up BiocManager:
 RUN   R -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')" && \
-      R -e "BiocManager::install(version = '3.14')" && \
+      R -e "BiocManager::install(version = '3.17')" && \
       R -e "require(devtools)"
 
 # Install R packages that are needed
-RUN   R -e "require(devtools)" && \
-      R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories())" && \
+RUN   R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories())" && \
       R -e "ArchR::installExtraPackages()" && \
       R -e "devtools::install_github('CostaLab/scMEGA')"  && \
       R -e "remotes::install_github('stuart-lab/signac', 'seurat5')" && \
