@@ -15,7 +15,8 @@ RUN apt-get update \
       libfribidi-dev \
       libgsl0-dev \
       libbz2-dev \
-      liblzma-dev
+      liblzma-dev \
+      cmake
 
 # Set CRAN and BioC repositories for package installations
 RUN   echo 'local({library(BiocManager); r <- repositories(); r["CRAN"] <- "https://cran.rstudio.com/"; options(repos = r)}); \
@@ -26,10 +27,12 @@ RUN   R -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.or
       R -e "BiocManager::install(version = '3.17')" && \
       R -e "require(devtools)"
 
+# Install scMEGA
+RUN   R -e "devtools::install_github('CostaLab/scMEGA')"
+
 # Install R packages that are needed
 RUN   R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos = BiocManager::repositories())" && \
       R -e "ArchR::installExtraPackages()" && \
-      R -e "devtools::install_github('CostaLab/scMEGA')"  && \
       R -e "remotes::install_github('stuart-lab/signac', 'seurat5')" && \
       R -e "BiocManager::install('JASPAR2020')" && \
       R -e "devtools::install_version('hexbin', version = '1.28.2')" && \
@@ -44,3 +47,5 @@ RUN   R -e "devtools::install_github('GreenleafLab/ArchR', ref='master', repos =
       R -e "BiocManager::install('ComplexHeatmap')" && \
       R -e "BiocManager::install('topGO')" && \
       R -e "BiocManager::install('clusterProfiler')"
+
+      # no scMEGA, no Signac
