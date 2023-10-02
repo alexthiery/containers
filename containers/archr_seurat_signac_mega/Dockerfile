@@ -17,4 +17,5 @@ RUN   R -e "require(devtools)" && \
       R -e "install.packages('VennDiagram')" && \
       R -e "BiocManager::install('ComplexHeatmap')" && \
       R -e "BiocManager::install('topGO')" && \
-      R -e "BiocManager::install('clusterProfiler')"
+      R -e "remotes::install_version('ggplot2', version='3.3.6')" && \
+      R -e "BiocManager::install('clusterProfiler', ask = F, update = F)"
