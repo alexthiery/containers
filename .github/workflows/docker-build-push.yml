@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths: 
-      - '**/mega_r4.3/Dockerfile'
+      - '**/archr_seurat_signac_mega/Dockerfile'
 
 jobs:
   build-push-docker:
