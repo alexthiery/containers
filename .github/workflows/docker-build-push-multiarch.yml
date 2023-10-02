@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths: 
-      - '**/Dockerfile'
+      - '**/TEMP_NONE/Dockerfile'
 
 jobs:
   build-push-docker:
