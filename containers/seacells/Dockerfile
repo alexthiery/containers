@@ -8,7 +8,7 @@ RUN apt-get install -y \
     libhdf5-dev \
     gcc
 
-# Install the conda environment
+# Install the conda environment 
 COPY environment.yml /
 RUN conda env create --quiet -f /environment.yml && conda clean -a
 
