@@ -1,5 +1,6 @@
 # You can use this file to create a conda environment for this pipeline:
 # conda env create -f environment.yml
+# have adapted to add more versions of packages, Palantir = v1.3.0, SEACells = no releases yet so taken from last commit on 1st june 2023
 
 name: seacells
 channels:
@@ -19,6 +20,6 @@ dependencies:
   - pip=23.1.1
   - notebook=6.5.4
   - pip:
-    - dfply
-    - git+https://github.com/dpeerlab/Palantir
-    - git+https://github.com/dpeerlab/SEACells
+    - dfply=0.3.3
+    - git+https://github.com/dpeerlab/Palantir@1cccc3ad409464214c8adf8ab51e86e3ac159f20
+    - git+https://github.com/dpeerlab/SEACells@501ba4aee65d230f400f1b65148d1f1a66b73d5a
