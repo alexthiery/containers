@@ -1,14 +1,14 @@
 FROM  nfcore/base:2.1
 
 LABEL authors="eva.hamrud@crick.ac.uk" \
-      description="Docker image containing requirements to run SEACELLS"
+      description="Docker image containing requirements to run SEACELLS" 
 
 RUN apt-get update
 RUN apt-get install -y \
     libhdf5-dev \
     gcc
 
-# Install the conda environment
+# Install the conda environment - removed SEACells commit tag as it wasnt working
 COPY environment.yml /
 RUN conda env create --quiet -f /environment.yml && conda clean -a
 
