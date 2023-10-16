@@ -8,7 +8,8 @@ RUN apt-get install -y \
     libhdf5-dev \
     gcc
 
-# Install the conda environment - removed SEACells + palantir commit tag as it wasnt working
+# Install the conda environment 
+# removed SEACells + palantir commit tag as it wasnt working + dfply version
 COPY environment.yml /
 RUN conda env create --quiet -f /environment.yml && conda clean -a
 
