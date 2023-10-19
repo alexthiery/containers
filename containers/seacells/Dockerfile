@@ -8,16 +8,19 @@ RUN apt-get install -y \
     libhdf5-dev \
     gcc
 
-# Install the conda environment 
-# removed SEACells + palantir commit tag as it wasnt working + dfply version
-COPY environment.yml /
-RUN conda env create --quiet -f /environment.yml && conda clean -a
+# # Install the conda environment 
+# # removed SEACells + palantir commit tag as it wasnt working + dfply version
+# COPY environment.yml /
+# RUN conda env create --quiet -f /environment.yml && conda clean -a
 
-# Add conda installation dir to PATH (instead of doing 'conda activate')
-ENV PATH /opt/conda/envs/seacells/bin:$PATH
+# # Add conda installation dir to PATH (instead of doing 'conda activate')
+# ENV PATH /opt/conda/envs/seacells/bin:$PATH
 
-# Dump the details of the installed packages to a file for posterity
-RUN conda env export --name seacells > seacells.yml
+# # Dump the details of the installed packages to a file for posterity
+# RUN conda env export --name seacells > seacells.yml
+
+RUN pip install SEACells==0.3.3
+RUN pip install palantir==1.3.1
 
 # # Add missing library
 # RUN pip install ipywidgets==8.0.6
@@ -27,7 +30,6 @@ RUN conda env export --name seacells > seacells.yml
 
 # # Install older version of pandas which is compatible with scanpy 1.8.2
 # RUN pip install pandas==1.3.3
-
 
 # ## From comparing seacells container v0.2 and v0.4:
 
