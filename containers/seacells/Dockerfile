@@ -25,16 +25,16 @@ RUN pip install palantir==1.3.1
 # Add missing library
 RUN pip install ipywidgets==8.0.6
 
-# # Install previous version of matplotlib due to clashes with scanpy
-# RUN pip install matplotlib==3.6.3
+# Install previous version of matplotlib due to clashes with scanpy
+RUN pip install matplotlib==3.6.3
 
-# # Install older version of pandas which is compatible with scanpy 1.8.2
-# RUN pip install pandas==1.3.3
+# Install older version of pandas which is compatible with scanpy 1.8.2
+RUN pip install pandas==1.3.3
 
-# ## From comparing seacells container v0.2 and v0.4:
+## From comparing seacells container v0.2 and v0.4:
 
-# # Install older version of importlib-metadata
-# RUN pip install importlib-metadata==6.5.0
+# Install older version of importlib-metadata
+RUN pip install importlib-metadata==6.5.0
 
-# # Install older version of notebook-shim
-# RUN pip install notebook-shim==0.2.2
+# Install older version of notebook-shim
+RUN pip install notebook-shim==0.2.2
