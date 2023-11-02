@@ -22,8 +22,8 @@ RUN apt-get install -y \
 RUN pip install SEACells==0.3.3
 RUN pip install palantir==1.3.1
 
-# # Add missing library
-# RUN pip install ipywidgets==8.0.6
+# Add missing library
+RUN pip install ipywidgets==8.0.6
 
 # # Install previous version of matplotlib due to clashes with scanpy
 # RUN pip install matplotlib==3.6.3
